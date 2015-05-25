@@ -1,3 +1,5 @@
 Start with basic markup that defines a set of tabs and associated set of pieces of content
 
 Use JS to dynamically set the widths of the tabs to fill the width of the container. 
+
+Associate the tabs and content by ID values (also means we can scroll to associated content with out JS).

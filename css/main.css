@@ -56,3 +56,11 @@ body {
   clear: both;   
 }
 /* -- END basic layout */
+
+.content li {
+  display: none; 
+}
+
+.content li.active {
+  display: block; 
+}

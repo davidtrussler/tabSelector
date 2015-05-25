@@ -10,6 +10,7 @@ app.TabsView = function() {
 
 		for (var i = 0; i < uls.length; i++) {
 			if (uls[i].className.indexOf('tabs') != -1) {
+				uls[i].addEventListener('click', showContent, false); 
 				tabs = uls[i].children; 
 			}
 
@@ -17,9 +18,23 @@ app.TabsView = function() {
 		};  
 
 		for (var i = 0; i < tabs.length; i++) {
-			var tab = tabs[i];
+			tabs[i].style.width = 100 / tabs.length + '%'; 
+		};
+	}
 
-			tab.style.width = 100 / tabs.length + '%'; 
-		}; 
+	function showContent(e) {
+		console.log('showContent!'); 
+
+		var id = e.target.href.split('#')[1]; 
+
+		// show/hide content
+		var activeContent = document.getElementById(id); 
+		var allContent = activeContent.parentNode.children
+
+		for (var i = 0; i < allContent.length; i++) {
+			allContent[i].className = ''; 
+		}
+
+		activeContent.className = 'active'; 
 	}
 }
