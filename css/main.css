@@ -1,0 +1,58 @@
+/*
+ * BEGIN CSS Reset -- 
+ * based on http://www.vcarrer.com/2010/11/css-mobile-reset.html
+**/
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0; 
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.25;
+  /*for iOS on change of orientation */ 
+  -webkit-text-size-adjust: none;
+}
+
+p, ul, h1, h2, h3, h4,
+fieldset, legend, input, button {
+  padding: 0;
+  margin: 0; 
+}
+
+ul {
+  list-style: none; 
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0; 
+}
+/* -- END CSS Reset */
+
+/* BEGIN basic layout -- */
+body {
+  background: #ccc;
+}
+
+#content {
+  max-width: 960px;
+  margin: 0 auto; 
+}
+
+.wrapper {
+  background: #fff;
+  padding: 1em 2%;
+}
+
+.tabs > li {
+  float: left;
+}
+
+.content {
+  clear: both;   
+}
+/* -- END basic layout */
