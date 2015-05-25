@@ -1,12 +1,13 @@
 var app = app || {}; 
 
 app.TabsView = function() {
+	var tabs; 
+
 	this.setUpTabs = function() {
 		console.log('setUpTabs!'); 
 
 		// set widths of tabs according to nuumber
 		var uls = document.getElementsByTagName('ul'); 
-		var tabs; 
 
 		for (var i = 0; i < uls.length; i++) {
 			if (uls[i].className.indexOf('tabs') != -1) {
@@ -25,16 +26,18 @@ app.TabsView = function() {
 	function showContent(e) {
 		console.log('showContent!'); 
 
-		var id = e.target.href.split('#')[1]; 
-
-		// show/hide content
+		// show/hide content and update active tab
+		var activated = e.target; 
+		var id = activated.href.split('#')[1]; 
 		var activeContent = document.getElementById(id); 
 		var allContent = activeContent.parentNode.children
 
 		for (var i = 0; i < allContent.length; i++) {
+			tabs[i].className = ''; 
 			allContent[i].className = ''; 
 		}
 
 		activeContent.className = 'active'; 
+		activated.parentNode.className = 'active'; 
 	}
 }
