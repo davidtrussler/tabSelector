@@ -35,7 +35,7 @@ table {
 
 /* BEGIN basic layout -- */
 body {
-  background: #ccc;
+  background: #999;
 }
 
 #content {
@@ -55,12 +55,31 @@ body {
 .content {
   clear: both;   
 }
-/* -- END basic layout */
+/* -- END basic layout 
+
+/* BEGIN specific styles -- */
+.tabs > li {
+  border-bottom: solid 1px; 
+  box-sizing: border-box;
+  padding: 0.5em; 
+  text-align: center; 
+}
+
+.tabs > li.active {
+  border: solid 1px; 
+  border-bottom: none; 
+  background: #ccc;
+}
 
 .content li {
   display: none; 
+  border: solid 1px; 
+  border-top: none; 
+  padding: 0.5em; 
 }
 
 .content li.active {
   display: block; 
+  background: #ccc;
 }
+/* -- BEGIN specific styles */
